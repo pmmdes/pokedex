@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;      
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0 2rem;
+    background-color: crimson;
+    color: white;
+    font-weight: 700;
+    font-size: 42px;
+}
+
+main {
+    width: min(90vw, 1200px);
+    margin: auto;
+}
+
+.pokemon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 20px 20px;    
+    width: 220px;
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 15px;
+
+    opacity: 0.6;
+}
+
+.card:hover {
+    opacity: 1;
+}
+
+img {
+    width: 140px;
+}
+
+.img-container {
+    background-color: #eee;
+    border-radius: 40px;
+    padding: 12px;
+}
+
+.poke-id {
+    margin-top: 10px;
+    font-weight: 400;
+    background-color: aliceblue;
+    border-radius: 12px;
+    text-align: center;
+    padding: 2px 8px;
+
+}
+
+.poke-name {
+    border-top: 1px solid #000;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 10px;
+    letter-spacing: 1px;
+}
