@@ -49,14 +49,18 @@ function createPokemonCard(pokemon) {
     //Tratando o tipo para upper case somente na primeira letra
     const type = getType[0].toUpperCase() + getType.slice(1);
 
+    const sprite = pokemon.sprites.front_default;
+
     //Adicionando a cor do background ao elemento do pokemon com base no tipo, buscando a cor correspondente no objeto Colors. 
     pokemonElement.style.backgroundColor = colors[type];
+
+    // Repositorio de imagens depreciado || https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png
     
     //Criando o HTML injetável
     const pokemonInnerHTML = `
     
         <div class="img-container"> 
-            <img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" alt="Imagem de ${pokemon.name}" class="poke-pic">
+            <img src="${sprite}" alt="Imagem de ${pokemon.name}" class="poke-pic">
         </div>     
 
         <h2 class="poke-id"> # ${pokemon.id.toString().padStart(3,'0')} </h2>
